@@ -13,7 +13,7 @@ then you get develop container and mysql container.
 
 ```bash
 yarn install
-yarn prisma generate
+yarn prisma migrate dev --name init
 yarn cdk deploy
 ```
 
@@ -24,7 +24,7 @@ Please edit `prisma/schema.prisma`.
 ### Redeploy
 
 ```bash
-yarn prisma generate
+yarn prisma migrate dev --name second
 yarn cdk deploy
 ```
 
