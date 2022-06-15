@@ -5,10 +5,10 @@ import {
 } from "aws-lambda";
 
 export const handler: CdkCustomResourceHandler = async (event) => {
+  console.log(JSON.stringify(event));
   const physicalResourceId =
     event.ResourceProperties.physicalResourceId ??
     "ef681fe1-aa6b-40f2-bee0-50033201ae69";
-  console.log(JSON.stringify(event));
   if (event.RequestType === "Delete") {
     return {
       PhysicalResourceId: physicalResourceId,
