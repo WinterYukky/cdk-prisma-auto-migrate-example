@@ -13,7 +13,7 @@ then you get develop container and mysql container.
 
 ```bash
 yarn install
-yarn prisma migrate dev --name init
+yarn prisma migrate dev --name first
 yarn cdk deploy
 ```
 
